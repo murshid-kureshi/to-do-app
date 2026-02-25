@@ -1,154 +1,164 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+  /* Google Font */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  transition: 0.3s ease;
-}
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f6b0b0, #c99af9);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
 
-/* DARK BODY */
-body.dark {
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-}
+  .container {
+    width: 100%;
+    max-width: 750px;
+    margin-top: 60px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
 
-/* Container */
-.container {
-  width: 100%;
-  max-width: 750px;
-  margin-top: 60px;
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-  transition: 0.3s ease;
-}
+  .title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #333;
+  }
 
-body.dark .container {
-  background: #1e1e2f;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
-  color: white;
-}
+  /* Form */
+  .form {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+  }
 
-/* Header */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  .form input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    transition: 0.3s;
+  }
 
-/* Title */
-.title {
-  font-size: 28px;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
+  .form input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 5px rgba(102, 126, 234, 0.4);
+  }
 
-/* Theme Button */
-.theme-toggle {
-  padding: 8px 14px;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  background: #333;
-  color: white;
-  transition: 0.3s;
-}
+  .form button {
+    padding: 12px 18px;
+    border-radius: 8px;
+    border: none;
+    background: #667eea;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+  }
 
-.theme-toggle:hover {
-  background: #555;
-}
+  .form button:hover {
+    background: #5a67d8;
+    transform: translateY(-2px);
+  }
 
-/* Form */
-.form {
-  display: flex;
-  gap: 12px;
-  margin-bottom: 25px;
-}
+  /* Todo Card */
+  .card {
+    background: #f9fafc;
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    border-left: 6px solid #667eea;
+    transition: 0.3s;
+  }
 
-.form input {
-  flex: 1;
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  font-size: 14px;
-  transition: 0.3s;
-}
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
 
-body.dark .form input {
-  background: #2a2a3d;
-  border: 1px solid #444;
-  color: white;
-}
+  .card h3 {
+    margin: 0;
+    font-weight: 500;
+    color: #333;
+  }
 
-.form input:focus {
-  outline: none;
-  border-color: #667eea;
-  box-shadow: 0 0 5px rgba(102, 126, 234, 0.4);
-}
+  /* Status Dropdown */
+  .card select {
+    margin-top: 12px;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+  }
 
-.form button {
-  padding: 12px 18px;
-  border-radius: 8px;
-  border: none;
-  background: #667eea;
-  color: white;
-  cursor: pointer;
-}
+  /* Buttons */
+  .buttons {
+    margin-top: 12px;
+    display: flex;
+    gap: 10px;
+  }
 
-/* Card */
-.card {
-  background: #f9fafc;
-  padding: 18px;
-  border-radius: 12px;
-  margin-bottom: 15px;
-  border-left: 6px solid #667eea;
-  transition: 0.3s;
-}
+  .buttons button {
+    padding: 7px 14px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.3s;
+  }
 
-body.dark .card {
-  background: #2a2a3d;
-  border-left: 6px solid #6c63ff;
-}
+  .buttons button:first-child {
+    background: #4caf50;
+    color: white;
+  }
 
-.card:hover {
-  transform: translateY(-3px);
-}
+  .buttons button:first-child:hover {
+    background: #43a047;
+  }
 
-/* Buttons */
-.delete {
-  background: #f44336;
-  color: white;
-}
+  .delete {
+    background: #f44336;
+    color: white;
+  }
 
-/* Pagination */
-.pagination {
-  margin-top: 25px;
-  text-align: center;
-}
+  .delete:hover {
+    background: #d32f2f;
+  }
 
-.pagination button {
-  padding: 8px 14px;
-  margin: 0 6px;
-  border-radius: 6px;
-  border: none;
-  background: #667eea;
-  color: white;
-}
+  /* Pagination */
+  .pagination {
+    margin-top: 25px;
+    text-align: center;
+  }
 
-.pagination button:disabled {
-  background: #ccc;
-}
+  .pagination button {
+    padding: 8px 14px;
+    margin: 0 6px;
+    border-radius: 6px;
+    border: none;
+    background: #667eea;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+  }
 
-body.dark .pagination button:disabled {
-  background: #444;
-}
+  .pagination button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
 
-.loading {
-  text-align: center;
-  font-weight: 500;
-}
+  .pagination button:hover:not(:disabled) {
+    background: #5a67d8;
+  }
+
+  .loading {
+    text-align: center;
+    font-weight: 500;
+    color: #333;
+  }
