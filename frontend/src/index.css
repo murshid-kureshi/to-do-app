@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-* {
-  box-sizing: border-box;
-  transition: background 0.3s ease, color 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
-}
 
 body {
   margin: 0;
@@ -21,14 +17,14 @@ body.dark {
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
 }
 
-/* 🔥 MAIN CONTAINER (Adjusted Width) */
+
 .container {
   width: 100%;
-  max-width: 1000px;   /* Increased width */
+  max-width: 1000px;   
   background: #ffffff;
-  padding: 30px;
+  padding: 60px;
   border-radius: 20px;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
 }
 
 body.dark .container {
@@ -215,7 +211,7 @@ body.dark .pagination button:disabled {
   font-weight: 500;
 }
 
-/* 📱 Responsive */
+
 @media (max-width: 768px) {
   .container {
     padding: 25px;
